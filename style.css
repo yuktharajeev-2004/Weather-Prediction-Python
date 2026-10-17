@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #74ebd5,
+        #9face6
+    );
+}
+
+.weather-card {
+    width: 100%;
+    max-width: 500px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #2c3e50;
+
+    margin-bottom: 10px;
+}
+
+.weather-card > p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* Search box */
+form {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #3498db;
+}
+
+button {
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #3498db;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+
+/* Error */
+
+.error {
+    background: #ffebee;
+
+    color: #c62828;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    margin-top: 15px;
+}
+
+
+/* Weather result */
+
+.weather-result {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eee;
+}
+
+.weather-result h2 {
+    color: #34495e;
+
+    margin-bottom: 10px;
+}
+
+.weather-result img {
+    width: 100px;
+
+    height: 100px;
+}
+
+.weather-result h3 {
+    font-size: 45px;
+
+    color: #2c3e50;
+
+    margin: 5px 0;
+}
+
+.weather-result > p {
+    text-transform: capitalize;
+
+    color: #666;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Weather details */
+
+.details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.details div {
+    background: #f4f8fb;
+
+    padding: 15px 8px;
+
+    border-radius: 12px;
+}
+
+.details strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: #555;
+
+    margin: 5px 0;
+}
+
+.details span {
+    font-weight: bold;
+
+    color: #2c3e50;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .weather-card {
+        padding: 25px 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+}
